@@ -15,4 +15,4 @@
 - service: awsdeployment
   command: aws ecs register-task-definition --cli-input-json file:///deploy/ecs-task-def.json
 - service: awsdeployment
-  command: aws ecs run-task --task-definition nodejs-test-app --cluster default
+  command: aws ecs run-task --task-definition nodejs-test-app
