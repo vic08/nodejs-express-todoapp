@@ -1,5 +1,7 @@
 web-codeship-example-node:
-  build: .
+  build:
+    image: 385945872227.dkr.ecr.us-east-2.amazonaws.com/test-repository/hello-world
+    dockerfile_path: Dockerfile
   depends_on:
     - postgres
   environment:
@@ -9,8 +11,14 @@ postgres:
   environment:
     POSTGRES_USER: todoapp
     POSTGRES_DB: todos
-codeship-heroku-deployment:
-  image: codeship/heroku-deployment
-  encrypted_env_file: deployment.env.encrypted
+awsdeployment:
+  image: codeship/aws-deployment
+  encrypted_env_file: env.encrypted
+  environment:
+    - AWS_DEFAULT_REGION=us-east-1
   volumes:
     - ./:/deploy
+dockercfg-generator:
+  image: codeship/aws-ecr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: env.encrypted
