@@ -13,6 +13,6 @@
   registry: 385945872227.dkr.ecr.us-east-2.amazonaws.com
   dockercfg_service: dockercfg-generator
 - service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file:///deploy/ecs-task-def.json
+  command: aws ecs register-task-definition --cli-input-json file:///deploy/ecs-task-def.json --region us-east-2
 - service: awsdeployment
-  command: aws ecs run-task --task-definition nodejs-test-app
+  command: aws ecs run-task --task-definition nodejs-test-app --cluster testcluster --region us-east-2
