@@ -5,7 +5,8 @@ web-codeship-example-node:
   depends_on:
     - postgres
   environment:
-    DATABASE_URL: "postgres://todoapp@postgres/todos"
+    DATABASE_URL: postgres://todoapp@postgres/todos
+    AWS_DEFAULT_REGION: us-east-1
 postgres:
   image: healthcheck/postgres:alpine
   environment:
