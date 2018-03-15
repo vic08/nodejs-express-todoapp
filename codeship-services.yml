@@ -6,8 +6,6 @@ web-codeship-example-node:
     - postgres
   environment:
     DATABASE_URL: postgres://todoapp@postgres/todos
-    AWS_DEFAULT_REGION: us-east-1
-    AWS_REGION: us-east-1
 postgres:
   image: healthcheck/postgres:alpine
   environment:
@@ -17,7 +15,7 @@ awsdeployment:
   image: codeship/aws-deployment
   encrypted_env_file: env.encrypted
   environment:
-    - AWS_DEFAULT_REGION=us-east-1
+    - AWS_DEFAULT_REGION=us-east-2
   volumes:
     - ./:/deploy
 dockercfg-generator:
