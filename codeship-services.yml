@@ -1,7 +1,11 @@
 web-codeship-example-node:
-  build:
-    image: 385945872227.dkr.ecr.us-east-2.amazonaws.com/test-repository/hello-world
-    dockerfile_path: Dockerfile
+  build: .
+  command: npm run dev
+  volumes:
+    - .:/usr/app/
+    - /usr/app/node_modules
+  ports:
+    - "3000:3000"
   depends_on:
     - postgres
   environment:

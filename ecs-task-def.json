@@ -2,7 +2,7 @@
   "containerDefinitions": [
     {
       "name": "hello-world",
-      "image": "385945872227.dkr.ecr.us-east-2.amazonaws.com/test-repository/hello-world",
+      "image": "385945872227.dkr.ecr.us-east-2.amazonaws.com/test-repository",
       "memory": 500,
       "essential": true,
       "portMappings": [
