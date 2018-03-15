@@ -9,7 +9,7 @@
 - name: ECR Push
   service: web-codeship-example-node
   type: push
-  image_name: 385945872227.dkr.ecr.us-east-2.amazonaws.com/test-repository/hello-world
+  image_name: 385945872227.dkr.ecr.us-east-2.amazonaws.com/test-repository
   registry: 385945872227.dkr.ecr.us-east-2.amazonaws.com
   dockercfg_service: dockercfg-generator
 - service: awsdeployment
