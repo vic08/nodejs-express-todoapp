@@ -7,6 +7,7 @@ web-codeship-example-node:
   environment:
     DATABASE_URL: postgres://todoapp@postgres/todos
     AWS_DEFAULT_REGION: us-east-1
+    AWS_REGION: us-east-1
 postgres:
   image: healthcheck/postgres:alpine
   environment:
